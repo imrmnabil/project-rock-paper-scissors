@@ -1,5 +1,5 @@
-let scoreC = 0;
-let scoreP = 0;
+let scoreC;
+let scoreP;
 const btnStart = document.querySelector('#start-button');
 const divHeading = document.querySelector('#heading-div');
 const divScore = document.querySelector('#score-div');
@@ -13,17 +13,23 @@ const textComment = document.querySelector('#comment-text');
 const divButton = document.querySelector('#button-div');
 const divOption = document.querySelector('#option-div');
 
+const modalVictory = new bootstrap.Modal(document.querySelector('#victoryModal'));
+const modalLoss = new bootstrap.Modal(document.querySelector('#lossModal'));
+
+const replayV = document.querySelector('#replay-button-v');
+const replayL = document.querySelector('#replay-button-l');
+
+
+
 const updateScore = function() {
     headingScore.innerText = `${scoreC} : ${scoreP}`;
     if(scoreP > 9)
     {
-        alert("Woo Hoo! You Won the Game!");
-        location.reload();
+        modalVictory.show();
     }
     else if(scoreC > 9)
     {
-        alert("Good Luck next time...");
-        location.reload();
+        modalLoss.show();
     }
     
 }
@@ -34,6 +40,11 @@ const loadGame = function () {
     divImg.classList.toggle('hide');
     divButton.classList.toggle('hide');
     divOption.classList.toggle('hide');
+    scoreC = 0;
+    scoreP = 0;
+    textComment.innerText = "Let's Begin..";
+    imgPlayer.setAttribute('src', 'resource/question.svg');
+    imgMachine.setAttribute('src', 'resource/question.svg');
     updateScore();
 }
 
@@ -45,7 +56,7 @@ const resultOut = function(x,y) {
     else {
         if((x === 2 && y === 1) || (x === 3 && y === 2) || (x === 1 && y === 3))
         {
-            textComment.innerText = 'WON THE MATCH';
+            textComment.innerText = 'YOU WIN';
             scoreP++;
         }
         else{
@@ -89,4 +100,14 @@ divOption.addEventListener('click', function (e) {
     const mInp = machineInput();
     console.log(mInp);
     pushToGame(parseInt(e.target.id),mInp);
+})
+
+replayV.addEventListener('click' , function() {
+    loadGame();
+    loadGame();
+})
+
+replayL.addEventListener('click' , function() {
+    loadGame();
+    loadGame();
 })

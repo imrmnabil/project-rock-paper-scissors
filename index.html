@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Walter+Turncoat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
@@ -12,15 +15,16 @@
 
 <body>
     <div class="container">
-        <div class="col border" id="game-board">
+        <div class="col " id="game-board">
             <div class="row" id="heading-div">
                 <h2 class="display-2 text-center">Rock Paper Scissor Game</h2>
+                <img src="resource/banner.png" alt="RPS">
             </div>
             <div class="row hide" id="score-div">
                 <h3 class="display-3 text-center" id="score-heading"></h3>
             </div>
             <div class="row justify-content-center hide" id="img-div">
-                <div class="col border " id="hand-container">
+                <div class="col" id="hand-container">
                     <div id="machine-hand-container" class="game-hand row justify-content-center">
                         <img src="resource/question.svg" class="shadow-sm" id="machine-img">
                     </div>
@@ -34,15 +38,57 @@
                 <button id="start-button" class="btn btn-primary btn-lg px-5 my-5">START</button>
             </div>
         </div>
-        <div class="col border hide" id="option-div">
+        <div class="col hide" id="option-div">
             <h3 class="display-5 text-center">Rock paper or scissor??</h3>
             <div class="row justify-content-evenly" id="options">
-                <img src="resource/rock.svg" alt="Rock" class="col-4" id="1">
-                <img src="resource/paper.svg" alt="Paper" class="col-4" id="2">
-                <img src="resource/scissor.svg" alt="Scissor" class="col-4" id="3">
+                <img src="resource/rock.svg" alt="Rock" class="col-4 img-fluid" id="1">
+                <img src="resource/paper.svg" alt="Paper" class="col-4 img-fluid" id="2">
+                <img src="resource/scissor.svg" alt="Scissor" class="col-4 img-fluid" id="3">
             </div>
         </div>
     </div>
+
+  
+    <!-- Victory Modal -->
+    <div class="modal fade" id="victoryModal" tabindex="-1" aria-labelledby="victoryModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="col-12">
+            <h2 class="display-2 text-center" id="victoryModalLabel">Victory</h2>
+            </div>
+            <div>
+            <p class="text-center h4">You win the game...</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="replay-button-v">Play Again <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+              </svg></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Loss Modal -->
+    <div class="modal fade" id="lossModal" tabindex="-1" aria-labelledby="lossModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="col-12">
+            <h2 class="display-2 text-center" id="lossModalLabel">Defeated</h2>
+            </div>
+            <div>
+            <p class="text-center h4">You loss...</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="replay-button-l">Retry <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+              </svg></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
