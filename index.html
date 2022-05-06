@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Walter+Turncoat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ROCK!!! PAPER! SCISSOR!</title>
 </head>
 
 <body>
     <div class="container">
         <div class="col " id="game-board">
             <div class="row" id="heading-div">
-                <h2 class="display-2 text-center">Rock Paper Scissor Game</h2>
+                <h2 class="display-2 text-center">ROCK!!! PAPER! SCISSOR!</h2>
                 <img src="resource/banner.png" alt="RPS">
             </div>
             <div class="row hide" id="score-div">
@@ -26,16 +26,16 @@
             <div class="row justify-content-center hide" id="img-div">
                 <div class="col" id="hand-container">
                     <div id="machine-hand-container" class="game-hand row justify-content-center">
-                        <img src="resource/question.svg" class="shadow-sm" id="machine-img">
+                        <img src="resource/question.svg" class="border border-4 border-dark" id="machine-img">
                     </div>
                     <p id="comment-text" class="text-center h3">Hi</p>
                     <div id="player-hand-container" class="game-hand row justify-content-center">
-                        <img src="resource/question.svg" class="shadow-sm" id="player-img">
+                        <img src="resource/question.svg" class="border border-4 border-dark" id="player-img">
                     </div>
                 </div>
             </div>
             <div class="row justify-content-center" id="button-div">
-                <button id="start-button" class="btn btn-primary btn-lg px-5 my-5">START</button>
+                <button id="start-button" class="btn btn-outline-dark btn-lg px-5 py-3 border-4"><h1 class="display-3">START<h1></button>
             </div>
         </div>
         <div class="col hide" id="option-div">
@@ -79,8 +79,8 @@
             <div>
             <p class="text-center h4">You loss...</p>
             </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="replay-button-l">Retry <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-lg btn-outline-dark" data-bs-dismiss="modal" id="replay-button-l">Retry <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
                 <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
               </svg></button>
@@ -98,3 +98,8 @@
 </body>
 
 </html>
+
+<!-- Credit:
+all images are from: www.freepik.com 
+font are from : fonts.google.com 
+style: bootstrap -->

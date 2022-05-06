@@ -1,9 +1,9 @@
-body{
+body {
     box-sizing: border-box;
     font-family: 'Walter Turncoat', cursive;
 }
 
-.game-hand img{
+.game-hand img {
     width: 250px;
     height: 250px;
     margin: 20px;
@@ -29,10 +29,11 @@ body{
     aspect-ratio: 1 /1;
 }
 
-#options img:hover{
-    background-color: lightgray;
+#options img:hover {
+    border:.2em solid black;
     border-radius: 50%;
 }
+
 
 .hide {
     display: none;
