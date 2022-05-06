@@ -38,3 +38,13 @@ body {
 .hide {
     display: none;
 }
+
+@media(max-width:1100px)
+{
+    .game-hand img {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: 6px;
+    }
+}
