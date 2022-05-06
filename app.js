@@ -52,19 +52,25 @@ const resultOut = function(x,y) {
     if(x === y)
     {
         textComment.innerText = 'DRAW';
-        setTimeout(() => {textComment.innerText = '...';},2000);
+        setTimeout(() => {textComment.innerText = '...';
+        imgPlayer.setAttribute('src', 'resource/question.svg');
+        imgMachine.setAttribute('src', 'resource/question.svg');},1000);
     }
     else {
         if((x === 2 && y === 1) || (x === 3 && y === 2) || (x === 1 && y === 3))
         {
             textComment.innerText = 'YOU WIN';
             scoreP++;
-            setTimeout(() => {textComment.innerText = '...';},2000);
+            setTimeout(() => {textComment.innerText = '...';
+            imgPlayer.setAttribute('src', 'resource/question.svg');
+            imgMachine.setAttribute('src', 'resource/question.svg');},1000);
         }
         else{
             textComment.innerText = 'YOU LOSS!';
             scoreC++;
-            setTimeout(() => {textComment.innerText = '...';},2000);
+            setTimeout(() => {textComment.innerText = '...';
+            imgPlayer.setAttribute('src', 'resource/question.svg');
+            imgMachine.setAttribute('src', 'resource/question.svg');},1000);
         }
     }
     updateScore();
