@@ -1,7 +1,30 @@
-.game-hand {
-    background-color: aquamarine;
+body{
+    box-sizing: border-box;
 }
 
 .game-hand img{
-    width: 300px;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#machine-img {
+    transform: rotate(180deg);
+}
+
+#hand-container {
+    max-width: fit-content;
+}
+
+#start-button {
+    width: fit-content;
+}
+
+#options img {
+    max-width: 200px;
+}
+
+.hide {
+    display: none;
 }
