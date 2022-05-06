@@ -52,25 +52,32 @@ const resultOut = function(x,y) {
     if(x === y)
     {
         textComment.innerText = 'DRAW';
+        divOption.classList.toggle('hide');
         setTimeout(() => {textComment.innerText = '...';
         imgPlayer.setAttribute('src', 'resource/question.svg');
-        imgMachine.setAttribute('src', 'resource/question.svg');},1000);
+        imgMachine.setAttribute('src', 'resource/question.svg');
+        divOption.classList.toggle('hide');},1000);
+        
     }
     else {
         if((x === 2 && y === 1) || (x === 3 && y === 2) || (x === 1 && y === 3))
         {
             textComment.innerText = 'YOU WIN';
             scoreP++;
+            divOption.classList.toggle('hide');
             setTimeout(() => {textComment.innerText = '...';
             imgPlayer.setAttribute('src', 'resource/question.svg');
-            imgMachine.setAttribute('src', 'resource/question.svg');},1000);
+            imgMachine.setAttribute('src', 'resource/question.svg');
+            divOption.classList.toggle('hide');},1000);
         }
         else{
             textComment.innerText = 'YOU LOSS!';
             scoreC++;
+            divOption.classList.toggle('hide');
             setTimeout(() => {textComment.innerText = '...';
             imgPlayer.setAttribute('src', 'resource/question.svg');
-            imgMachine.setAttribute('src', 'resource/question.svg');},1000);
+            imgMachine.setAttribute('src', 'resource/question.svg');
+            divOption.classList.toggle('hide');},1000);
         }
     }
     updateScore();
